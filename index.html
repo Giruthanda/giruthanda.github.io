@@ -5,76 +5,189 @@
   </head>
 
   <body>
-    <form name="interestcal">
+    <div id="simple-interest">
 
-    <table border="2">
-      <tr>
-        <th>
-          INTEREST CALCULATOR
-          </th>
-        </tr>
+
+      <form name="interestcal">
+      <table border="2">
         <tr>
-          <td>
-            <label>Principal: </label>
-            <input type="text" name="principal" />
-            </td>
-
+          <th>
+            SIMPLE INTEREST CALCULATOR
+            </th>
           </tr>
           <tr>
             <td>
-              <label>Rate: </label>
-              <input type="text" name="rate" />
+              <label>Principal: </label>
+              <input type="text" name="principal" />
               </td>
-            </tr>
 
+            </tr>
             <tr>
               <td>
-                <label>Time: </label>
-                <input type="text" name="time" />
+                <label>Rate: </label>
+                <input type="text" name="rate" />
                 </td>
               </tr>
+
               <tr>
                 <td>
-                  <input type="reset" value="Clear" />
-                  <input type="button" value="Calculate" onClick="interest()" />
+                  <label>Time: </label>
+                  <input type="text" name="time" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="reset" value="Clear" />
+                    <input type="button" value="Calculate" onClick="interest()" />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                    <label>Total: </label>
+                    <input type="text" name="interestTotalRes" />
+                    </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                      <label>Interest: </label>
+                      <input type="text" name="interestRes" />
+                      </td>
+                      </tr>
+        </table>
+        </form>
+    </div>
+    <br />
+
+
+    <div id="compound-interest">
+
+      <form name="compoundinterestcal">
+      <table border="2">
+        <tr>
+          <th>
+            COMPOUND INTEREST CALCULATOR
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <label>Principal: </label>
+              <input type="text" name="principal" />
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <label>Rate: </label>
+                <input type="text" name="rate" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Time: (Years) </label>
+                  <input type="text" name="time" />
                   </td>
                 </tr>
 
                 <tr>
                   <td>
-                  <label>Total: </label>
-                  <input type="text" name="interestTotalRes" />
-                  </td>
+                    <label>Compound: </label>
+                    <select name="compound">
+                      <option value="365">Daily</option>
+                      <option value="52">Weekly</option>
+                      <option value="26">Bi-Weekly</option>
+                      <option value="24">Semi-Monthly</option>
+                      <option value="12">Monthly</option>
+                      <option value="4">Quarterly</option>
+                      <option value="2">Semi-anually</option>
+                      <option value="1">Annually</option>
+                    </select>
+                    </td>
+                  </tr>
+
+                <tr>
+                  <td>
+                    <input type="reset" value="Clear" />
+                    <input type="button" value="Calculate" onClick="compinterest()" />
+                    </td>
                   </tr>
 
                   <tr>
                     <td>
-                    <label>Interest: </label>
-                    <input type="text" name="interestRes" />
+                    <label>Total: </label>
+                    <input type="text" name="interestTotalRes" />
                     </td>
                     </tr>
-      </table>
-      </form>
-      <script type="text/javascript">
-      function interest()
-      {
-        var principal, rate, time, interestTotalRes, interestRes;
-        principal = Number(document.interestcal.principal.value);
-        rate = Number(document.interestcal.rate.value);
-        rate/=100.0;
-        time = Number(document.interestcal.time.value);
 
-        interestRes = (principal * rate) * time;
-        interestTotalRes = principal + interestRes;
-        interestTotalRes.toLocaleString();
-        document.interestcal.interestRes.value = formatMoney(interestRes);
-        document.interestcal.interestTotalRes.value = formatMoney(interestTotalRes);
-      }
+                    <tr>
+                      <td>
+                      <label>Interest: </label>
+                      <input type="text" name="interestRes" />
+                      </td>
+                      </tr>
+        </table>
+        </form>
+    </div>
+<br />
 
-      function formatMoney(number) {
-        return number.toLocaleString('en-US', { style: 'currency', currency: 'PHP' });
-      }
+    <div id="creditcard">
+      <form name="creditcard">
+        <table border="2">
+          <th>
+            CREDIT CARD VALIDATOR
+          </th>
 
+          <tr>
+            <td>
+                <label>Credit Card Number</label>
+                <input type="number" name="credit" />
+                <input type="button" value="check" onClick="creditc()" />
+            </td>
+          </tr>
+          <tr><td>
+            <input type="text" name="creditcheck" />
+            </td>
+          </tr>
+        </table></form>
+        </div>
+
+        <br />
+      <div id="upc">
+        <form name="upc">
+              <table border="2">
+                <th>
+                  UPC VALIDATOR
+                </th>
+
+                <tr>
+            <td>
+
+                <input type="text" name="upccode" />
+                <input type="button" value="check" onClick="upcc()" />
+
+            </td>
+          </tr>
+          <tr><td>
+            <input type="text" name="upccheck"/>
+            </td>
+          </tr>
+        </table>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+      <script src="script.js">
       </script>
 
     </body>
