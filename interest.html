@@ -1,0 +1,154 @@
+<html>
+<head>
+  <title>Interest Calculator</title>
+  <link href="interest-styles.css" type="text/css" rel="stylesheet">
+
+  </head>
+
+<body>
+  <div>
+    <a href="index.html" style="text-decoration:none;"><h1 align="center">POCKET BUDDY</h1></a>
+    </div>
+    <div id="menu" align="center">
+      <a href="interest.html"><button>Interest Calculator</button></a>
+      <a href="credit.html"><button>Credit Card Validator</button></a>
+      <a href="upc.html"><button>UPC Checker</button></a><br />
+      <a href="calculator.html"><button>Calculator</button></a>
+      <a href="tracker.html"><button>Expenses Lister</button></a>
+      </div>
+  <div>
+    <center>
+      <div class="interest">
+        <form name="interestcal">
+        <table>
+          <tr>
+            <th>
+              SIMPLE INTEREST CALCULATOR
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <label>Principal: </label>
+                <input type="text" name="principal" />
+                </td>
+
+              </tr>
+              <tr>
+                <td>
+                  <label>Rate: </label>
+                  <input type="text" name="rate" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <label>Time: </label>
+                    <input type="text" name="time" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="reset" value="Clear" />
+                      <input type="button" value="Calculate" onClick="interest()" />
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                      <label>Total: </label>
+                      <input type="text" name="interestTotalRes" />
+                      </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                        <label>Interest: </label>
+                        <input type="text" name="interestRes" />
+                        </td>
+                        </tr>
+          </table>
+          </form>
+        </div>
+
+      </center>
+    </div>
+    <br />
+    <div>
+
+      <center>
+
+
+    <div id="compound-interest">
+
+      <form name="compoundinterestcal">
+
+      <table>
+        <tr>
+          <th>
+            COMPOUND INTEREST CALCULATOR
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <label>Principal: </label>
+              <input type="text" name="principal" />
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <label>Rate: </label>
+                <input type="text" name="rate" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>Time: (Years) </label>
+                  <input type="text" name="time" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <label>Compound: </label>
+                    <select name="compound">
+                      <option value="365">Daily</option>
+                      <option value="52">Weekly</option>
+                      <option value="26">Bi-Weekly</option>
+                      <option value="24">Semi-Monthly</option>
+                      <option value="12">Monthly</option>
+                      <option value="4">Quarterly</option>
+                      <option value="2">Semi-anually</option>
+                      <option value="1">Annually</option>
+                    </select>
+                    </td>
+                  </tr>
+
+                <tr>
+                  <td>
+                    <input type="reset" value="Clear" />
+                    <input type="button" value="Calculate" onClick="compinterest()" />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                    <label>Total: </label>
+                    <input type="text" name="interestTotalRes" />
+                    </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                      <label>Interest: </label>
+                      <input type="text" name="interestRes" />
+                      </td>
+                      </tr>
+        </table>
+        </form>
+    </div>
+</div>
+    <script src="interest-script.js"></script>
+  </body>
+</html>

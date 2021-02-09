@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>UPC Checker</title>
-  <link href="upc-styles.css" type="text/css" rel="stylesheet">
+  <title>Credit Card Validator</title>
+  <link href="credit-styles.css" type="text/css" rel="stylesheet">
   </head>
 
   <body>
@@ -16,32 +16,29 @@
         <a href="upc.html"><button>UPC Checker</button></a><br />
         <a href="calculator.html"><button>Calculator</button></a>
         <a href="tracker.html"><button>Expenses Lister</button></a>
-
         </div>
     <center>
-      <div id="upc">
-        <form name="upc">
-              <table>
-                <th>
-                  UPC VALIDATOR
-                </th>
+    <div id="creditcard">
+      <form name="creditcard">
+        <table>
+          <th>
+            CREDIT CARD VALIDATOR
+          </th>
 
-                <tr>
+          <tr>
             <td>
-<label>UPC Number<br /></label>
-                <input type="text" name="upccode" />
-                <input type="button" value="check" onClick="upcc()" />
-
+                <label>Credit Card Number</label>
+                <input type="number" name="credit" />
+                <input type="button" value="check" onClick="creditc()" />
             </td>
           </tr>
           <tr><td>
-            <input id="validator" type="text" name="upccheck"/>
+            <input id="validator" type="text" name="creditcheck" />
             </td>
           </tr>
         </table>
         </form>
-    </div>
-
+        </div>
         </center>
 
 
